@@ -17,14 +17,14 @@ class SongsController < ApplicationController
  end
 
  def update
-   @song = song.update(post_params)
+   @song = Song.update(post_params)
    redirect_to song_path(@song)
  end
 
  private
 
  def find_song
-    @song = song.find(params[:id])
+    @song = Song.find(params[:id])
  end
 
  def post_params
