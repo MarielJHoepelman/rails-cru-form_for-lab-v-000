@@ -10,7 +10,6 @@ class GenresController < ApplicationController
    redirect_to genre_path(@genre)
  end
 
-
  def show
  end
 
