@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  # before_action :find_student, only: [:show, :edit, :update]
+  before_action :find_student, only: [:show, :edit, :update]
 
  def new
    @artist = Artist.new
@@ -26,12 +26,12 @@ class ArtistsController < ApplicationController
  end
 
  private
- #
- # def find_student
- #   @student = Student.find(params[:id])
- # end
- #
- # def post_params
- #   params.require(:student).permit(:first_name, :last_name)
- # end
+
+ def find_artist
+   @artist = Artist.find(params[:id])
+ end
+
+ def post_params
+   params.require(:artist).permit(:name, :bio)
+ end
 end
