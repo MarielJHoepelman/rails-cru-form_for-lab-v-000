@@ -2,7 +2,7 @@ class SongsController < ApplicationController
   before_action :find_song, only: [:show, :edit, :update]
 
  def new
-   @genre = Genre.new
+   @song = Song.new
  end
 
  def create
