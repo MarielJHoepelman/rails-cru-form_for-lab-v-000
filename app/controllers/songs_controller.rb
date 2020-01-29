@@ -23,7 +23,7 @@ class SongsController < ApplicationController
 
  private
 
- def find_genre
+ def find_song
     @song = song.find(params[:id])
  end
 
