@@ -17,8 +17,8 @@ class SongsController < ApplicationController
  end
 
  def update
-   @genre = Genre.update(post_params)
-   redirect_to genre_path(@genre)
+   @song = song.update(post_params)
+   redirect_to song_path(@song)
  end
 
  private
