@@ -24,10 +24,10 @@ class SongsController < ApplicationController
  private
 
  def find_genre
-    @genre = Genre.find(params[:id])
+    @song = song.find(params[:id])
  end
 
  def post_params
-   params.require(:genre).permit(:name)
+   params.require(:song).permit(:name)
  end
 end
