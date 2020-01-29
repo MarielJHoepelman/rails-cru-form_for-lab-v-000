@@ -26,11 +26,11 @@ class GenresController < ApplicationController
 
  private
 
- # def find_artist
- #   @artist = Artist.find(params[:id])
- # end
- #
- # def post_params
- #   params.require(:artist).permit(:name, :bio)
- # end
+ def find_genre
+    @genre = Genre.find(params[:id])
+ end
+
+ def post_params
+   params.require(:genre).permit(:name)
+ end
 end
