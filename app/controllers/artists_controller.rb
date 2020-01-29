@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  before_action :find_student, only: [:show, :edit, :update]
+  before_action :find_artist, only: [:show, :edit, :update]
 
  def new
    @artist = Artist.new
@@ -12,16 +12,13 @@ class ArtistsController < ApplicationController
 
 
  def show
-   @artist = Artist.find(params[:id])
  end
 
  def edit
-   @artist = Artist.find(params[:id])
  end
 
  def update
-   @artist = Artist.find(params[:id])
-   @artist.update(name: params[:artist][:name], bio: params[:artist][:bio])
+   @artist.update(post_params)
    redirect_to artist_path(@artist)
  end
 
