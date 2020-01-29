@@ -14,14 +14,14 @@ class GenresController < ApplicationController
  def show
    @genre = Genre.find(params[:id])
  end
- #
- # def edit
- # end
- #
- # def update
- #   @artist.update(post_params)
- #   redirect_to artist_path(@artist)
- # end
+
+ def edit
+ end
+
+ def update
+   @genre = Genre.find(params[:id])
+   redirect_to genre_path(@genre)
+ end
 
  private
 
