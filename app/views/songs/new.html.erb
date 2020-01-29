@@ -2,7 +2,7 @@
 <%= form_for(@song) do |f| %>
 <%= f.label :name %>
 <% @artists.each do |artist| %>
-  <label><%= artist.name %></label><input id="<%= artist.name %>" type="radio" name="genre" value="<%= genre.id %>">
+  <label><%= artist.name %></label><input id="<%= artist.name %>" type="radio" name="song[artist_id]" value="<%= artist.id %>">
 <% end %>
 <%= f.submit %>
 <% end %>
