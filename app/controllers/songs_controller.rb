@@ -6,8 +6,8 @@ class SongsController < ApplicationController
  end
 
  def create
-   @genre = Genre.create(post_params)
-   redirect_to genre_path(@genre)
+   @song = Song.create(post_params)
+   redirect_to song_path(@song)
  end
 
  def show
