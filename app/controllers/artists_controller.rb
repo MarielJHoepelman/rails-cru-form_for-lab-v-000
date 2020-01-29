@@ -6,7 +6,7 @@ class ArtistsController < ApplicationController
  end
 
  def create
-   @student = Student.create(post_params)
+   @artist = Artist.create(name: params[:artist][:name], bio: params[:artist][:bio])
    redirect_to student_path(@student)
  end
 
