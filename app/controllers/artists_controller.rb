@@ -7,20 +7,20 @@ class ArtistsController < ApplicationController
 
  def create
    @artist = Artist.create(name: params[:artist][:name], bio: params[:artist][:bio])
-   redirect_to student_path(@student)
+   redirect_to artist_path(@artist)
  end
 
 
- def show
- end
-
- def edit
- end
-
- def update
-   @student.update(post_params)
-   redirect_to student_path(@student)
- end
+ # def show
+ # end
+ #
+ # def edit
+ # end
+ #
+ # def update
+ #   @student.update(post_params)
+ #   redirect_to student_path(@student)
+ # end
 
  private
  #
