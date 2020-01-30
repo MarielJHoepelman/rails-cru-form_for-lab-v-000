@@ -1,5 +1,7 @@
-<% @songs.each do |song| %>
-        <li>
-          <p><%= link_to list.name, list_path(list) %></p>
-      </li>
-      <% end %>
+<ul>
+  <% @songs.each do |song| %>
+    <li>
+      <p><%= link_to list.name, list_path(list) %></p>
+    </li>
+  <% end %>
+</ul>
