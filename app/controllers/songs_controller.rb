@@ -1,27 +1,31 @@
 class SongsController < ApplicationController
   before_action :find_song, only: [:show, :edit, :update]
 
- def new
+  def index
+    @songs = Song.all
+  end
+
+  def new
    @song = Song.new
    @artists = Artist.all
    @genres = Genre.all
- end
+  end
 
- def create
+  def create
    @song = Song.create(post_params)
    redirect_to song_path(@song)
- end
+  end
 
- def show
- end
+   def show
+   end
 
- def edit
- end
+   def edit
+   end
 
- def update
-   @song = Song.update(post_params)
-   redirect_to song_path(@song)
- end
+   def update
+     @song = Song.update(post_params)
+     redirect_to song_path(@song)
+   end
 
  private
 
