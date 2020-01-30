@@ -5,9 +5,5 @@
 <%= f.label :artist_id %>
 <%= f.text_field :artist_id %>
 
-<% @artists.each do |artist| %>
-  <label><%= artist.name %></label>
-  <input id="<%= artist.name %>" type="radio" name="song[artist_id]" value="<%= artist.id %>">
-<% end %>
 <%= f.submit %>
 <% end %>
